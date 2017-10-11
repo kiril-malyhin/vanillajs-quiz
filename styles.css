@@ -60,3 +60,7 @@ button:hover{
 .showCorrect, .showIncorrect {
     display: inline-block;
 }
+
+.size {
+    font-size: 30px;
+}

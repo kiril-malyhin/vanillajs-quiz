@@ -55,6 +55,11 @@ function renderQuestion(question) {
     const questionOptions = res.querySelector('.question-options');
     const correct = res.querySelector('.correct');
     const incorrect = res.querySelector('.incorrect');
+    const correctCount = document.querySelector('.correct-count');
+    const inCorrectCount = document.querySelector('.incorrect-count');
+    let showCorrectCount;
+    let showIncorrectCount;
+
 
     quizItem.id = question.questionId;
 
@@ -91,9 +96,21 @@ function renderQuestion(question) {
             } else {
                 incorrect.classList.add('showIncorrect');
             }
-        })
+
+            countResults();
+
+        });
+
+        countResults();
 
         return resOption;
+    }
+
+    function countResults() {
+        showCorrectCount = document.querySelectorAll('.showCorrect').length;
+        showIncorrectCount = document.querySelectorAll('.showIncorrect').length;
+        correctCount.innerHTML = showCorrectCount;
+        inCorrectCount.innerHTML = showIncorrectCount;
     }
 }
 
