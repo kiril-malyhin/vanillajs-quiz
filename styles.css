@@ -40,9 +40,13 @@ button:hover{
     display: none;
 }
 
+.answer.showAnswer {
+    display: initial;
+}
+
 .correct, .incorrect {
     font-size: 30px;
-    display: inline-block;
+    display: none;
 }
 
 .correct {
@@ -54,5 +58,5 @@ button:hover{
 }
 
 .showCorrect, .showIncorrect {
-    display: block;
+    display: inline-block;
 }
